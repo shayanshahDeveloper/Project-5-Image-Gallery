@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery - Shayan Shah</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+  </head>
+  <body>
+    <div class="gallery-wrap">
+      <img src="/images/back.png" id="backbtn" />
+      <div class="gallery">
+        <div>
+          <span><img src="images/image-1.png" /></span>
+          <span><img src="images/image-2.png" /></span>
+          <span><img src="images/image-3.png" /></span>
+        </div>
+        <div>
+          <span><img src="images/image-4.png" /></span>
+          <span><img src="images/image-5.png" /></span>
+          <span><img src="images/image-6.png" /></span>
+        </div>
+      </div>
+      <img src="/images/next.png" id="nextbtn" />
+    </div>
+    <p>
+      Designed By |<span>Shayan Shah</span></p>
+
+      <script>
+        let scrolContainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("backbtn");
+        let nextbtn = document.getElementById("nextbtn");
+
+        scrolContainer.addEventListener("wheel", (evt) => {
+          evt.preventDefault();
+          scrolContainer.scrollLeft += evt.deltaY;
+          scrolContainer.style.scrollBehavior = "auto";
+        });
+
+        nextbtn.addEventListener("click", () => {
+          scrolContainer.style.scrollBehavior = "smooth";
+          scrolContainer.scrollLeft += 900;
+        });
+        backbtn.addEventListener("click", () => {
+          scrolContainer.style.scrollBehavior = "smooth";
+          scrolContainer.scrollLeft -= 900;
+        });
+      </script>
+    </p>
+  </body>
+</html>

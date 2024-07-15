@@ -1,0 +1,84 @@
+/*linkdin Shayan Shah*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #919191;
+}
+h1 {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.gallery {
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+  min-width: 360px;
+}
+
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+
+.gallery div img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+#backbtn,
+#nextbtn {
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.gallery div img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+p {
+  min-width: 360px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: -110px;
+  justify-content: center;
+  color: #fff;
+}
+
+p span {
+  color: white;
+  margin-left: 5px;
+  transition: color 0.5s;
+}
+p span:hover {
+  margin-left: 5px;
+  color: red;
+  font-weight: bold;
+}
